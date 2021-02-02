@@ -1,0 +1,334 @@
+
+.App-header_lejhro {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  height: 140px;
+}
+
+.image_lejhro_logo 
+{
+  width: 30%;
+}
+
+.btn_lejhro {
+  margin-top: 10%;
+  background: lightseagreen;
+  color: white;
+  width: 60%;
+  border-radius: 12px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  position:relative;
+  overflow:hidden;
+}
+
+.btn_lejhro:hover
+{
+  color:white;
+}
+
+/*added for shiny effect on button*/
+.btn_lejhro::before{
+   content:"";
+   height:160%;
+   width:30px;
+   background:rgba(255,255,255,.1);
+   position:absolute;
+   top:-15px; 
+   transform:translateX(-70px) rotate(20deg);
+   animation: mymove 1s infinite;
+   animation-timing-function: linear;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 250px;}
+}
+
+.image_lejhro_one 
+{
+  width: 100%;
+}
+
+.text_on_image
+{
+  position: absolute;
+  top: 40%;
+  left: 25px;
+  color:white;
+  font-style: italic;
+  font-size:20px;
+}
+
+.text_on_image1
+{
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  color:white;
+  font-style: italic;
+  font-size:20px;
+}
+
+.btn_on_image
+{
+  position:absolute;
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:transparent;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.btn_on_image:hover
+{
+  color:white;
+}
+/* ----After code segregation ------ */
+#fixedArrow{
+  position: fixed;
+  right:2%;
+  z-index: 1;
+  bottom: 2em;
+  display: block;
+}  
+
+#fixedArrow>div> svg{
+    width: 2em;
+    height: 2em;
+    color: #ff854d;
+    margin: auto;
+  }
+  #fixedArrow>div>span{
+    font-size: small;
+  }
+  .col-tab{
+    padding-left: 0%;
+    padding-right: 0%;
+    text-align: center;
+  }
+
+  /*=============== Tabs Component=============== */
+  .tab-list {  
+    /* border-bottom: 1px solid #ccc; */
+    padding-left: 0;
+    margin-bottom: 2em;
+    box-shadow: 0 17px 39px rgba(0,0,0,.05);
+  }
+  
+  .tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.75rem 3.5rem;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .tab-list-active {
+    background-color: #05bbb2;
+    border: solid #05bbb2;
+    color:#ffffff;
+    border-width: 1px 1px 0 1px;
+    font-weight: bold;
+  }
+
+  .tab-list-active::after{
+    display: block;
+    color: transparent;
+    content: "";
+    position: absolute;
+    width: 0; 
+    left: 0;
+    right: 0; 
+    margin: 4.4% auto;
+    border-width: 15px 15px 0px;
+    border-style: solid;
+    border-color: #05bbb2 transparent;
+    background-position-x: -100px;
+  }
+  .tab-list-active>label{
+    margin-bottom: 0.4em 0;
+  }
+  /* .tab-list-active:hover{
+    background-color: #05bbb2;
+    border: solid #05bbb2;
+  } */
+
+
+  
+
+  .arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #2f2f2f;
+	font-size: 0;
+	line-height: 0;
+}
+/* -------------------------------------------------------------------*/
+
+/* ----------------------------BLOG---------------------------- */
+
+.blog-card{
+  overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+    border: 1px solid #e6ecef;
+    transition: all 0.4s ease;
+    margin: 0 1%;
+    padding: 0;
+    width: 31%;
+}
+.blog-card>p:hover{
+  text-decoration: none;
+}
+.img_blog{
+  width: 400px;
+  height: 300px;
+  padding: 0;
+}
+
+
+@keyframes animateimage
+{
+	20%
+	{
+		border-radius:50%;
+  }
+  40%
+	{
+		transition: height 5s, width 5s, border-radius 5s;
+  }
+  60%
+	{
+		transition: height 4s, width 4s, border-radius 4s;
+	}
+	80%
+	{
+		transition: height 3s, width 3s, border-radius 3s;
+	}
+	100%
+	{
+		transition: height 2s, width 2s, border-radius 2s;
+	}
+	
+}
+
+.image_lejhro_two_dynamic
+{
+	width:80%;
+	height:250px;
+	margin:1%;
+	animation:animateimage;
+	animation-duration:10s;
+	animation-iteration-count:infinite;
+}
+
+@media screen and (max-width:768px) {
+  body {
+    background: white;
+  }
+/*----------------- Header ----------------------*/
+  .App-header_lejhro {
+    height: 170px;
+  }
+  .logo{
+    text-align: center !important;
+  }
+  .image_lejhro_logo {
+    width: 30%;
+  }
+
+  .btn_lejhro {
+    font-size: auto;
+    width: 50%;
+  }
+  
+  .text_on_image
+  {
+    font-size:12px;
+  }
+
+  .text_on_image1
+{ 
+  font-size:12px;
+}
+
+  .text-style {
+    font-size: 1.3rem;
+  }
+
+  .image_lejhro_one {
+    width: 95%;
+  }
+
+/* -------BLOG------ */
+.blog-card{
+  width: 100%;
+    padding: .5em;
+}
+.img_blog {
+  width: 350px;
+  height: 250px;
+}
+
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+  body {
+    background: white;
+  }
+
+  .btn_lejhro {
+    font-size: auto;
+    width: 70%;
+  }
+
+  .text-style {
+    font-size: 1.2rem;
+  }
+
+  .image_lejhro_two_dynamic {
+    width: 100%;
+  }
+
+  .image_lejhro_two_dynamic {
+    height: 150px;
+    width: 150px;
+    transition: height 3s, width 5s, border-radius 5s;
+  }
+
+  .image_lejhro_two_dynamic:hover {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+}
+
+
+
+
+/*.image_lejhro_two_dynamic {
+  width: 100%;
+}
+
+.image_lejhro_two_dynamic {
+  height: 200px;
+  width: 200px;
+  transition: height 3s, width 5s, border-radius 5s;
+}
+
+.image_lejhro_two_dynamic:hover {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}*/
