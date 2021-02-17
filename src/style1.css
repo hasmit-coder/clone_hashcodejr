@@ -1,0 +1,27 @@
+body {
+    background: white;
+    margin: 0;
+  }
+  p {
+    color: black;
+    margin-left:0;
+    padding:1px 5px;
+  }
+  div{
+      height:1000px; 
+    margin-left:25%;
+    }  
+    
+  
+  h1 {
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    background-color: aqua;
+    padding : 0px;
+    width : 60px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;            /*if links will be large in no then one nav bar will come automatically. */
